@@ -1,0 +1,23 @@
+import nltk
+from nltk.chat import Chat
+
+# Reflection dictionary can be left empty as it's not used here
+reflection = {}
+
+# Define the pattern-response pairs
+pairs = [
+    [r'hello', ['Hello! How can I assist you today?']],
+    [r'how are you', ["I'm just a computer program, but I'm doing well. How can I help you?"]],
+    [r'name', ["I don't have a name, you can call me Chatbot."]],
+    [r'bye', ['Goodbye! If you have more questions, feel free to ask.']]
+]
+
+# Function to initiate the chatbot
+def chat():
+    print("Hi there! I'm a simple chatbot. Type something to start...")
+    chat = Chat(pairs, reflection)
+    chat.converse()
+
+# Start the chat
+chat()
+
